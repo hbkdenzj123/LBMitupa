@@ -19,14 +19,14 @@ html, body {
 }
 
 .large-div {
-    width: 100%; /* Đặt chiều rộng của div lớn chiếm toàn bộ chiều rộng màn hình */
-    height: 100%; /* Đặt chiều cao của div lớn chiếm toàn bộ chiều cao màn hình */
-    background-image: url('assets/IMG_9800.JPG'); /* Đặt hình nền cho div lớn */
+    width: 100%; /* Chiều rộng của div lớn chiếm toàn bộ chiều rộng màn hình */
+    min-height: 100vh; /* Chiều cao tối thiểu của div lớn bằng 100vh (viewport height) */
+    background-image: url('assets/IMG_9800.JPG'); /* Hình nền cho div lớn */
     background-size: cover; /* Làm cho hình ảnh phủ toàn bộ div */
     display: flex; /* Sử dụng flexbox để sắp xếp các phần tử bên trong */
     flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
     align-items: center; /* Căn giữa các phần tử theo chiều ngang */
-    padding: 20px; /* Kiểu padding bên trong */
+    padding: 20px; /* Padding bên trong */
 }
 
 .header {
@@ -36,20 +36,30 @@ html, body {
 }
 
 .logo {
-    height: 200px; /* Điều chỉnh chiều cao của logo */
+    height: 100px; /* Điều chỉnh chiều cao của logo */
     margin-right: 20px; /* Khoảng cách giữa logo và đoạn văn */
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .text-container {
     display: flex;
     flex-direction: column; /* Sắp xếp văn bản theo chiều dọc */
     justify-content: space-between; /* Căn giữa các đoạn văn trong container */
-    margin: 10px 0;
     margin-top: 1px;
+    color: white;
 }
-.text-container p{
-  color: white;
+
+.text-container p {
+  margin: 5px 0;
+}
+.p1 {
+  font-size: 20px;
+}
+.p2 {
+    font-size: 24px; /* Kích cỡ chữ của p2 lớn hơn, bạn có thể thay đổi giá trị này tùy theo ý thích */
+}
+.p3 {
+  font-size: 18px;
 }
 
 .small-div {
@@ -75,7 +85,7 @@ html, body {
 }
 
 .mini-logo {
-    height: 35px; /* Chiều cao của mini logo */
+    height: 40px; /* Chiều cao của mini logo */
     margin-right: 10px; /* Khoảng cách giữa mini logo và text */
 }
   </style>
@@ -83,11 +93,11 @@ html, body {
 <body>
   <div class="large-div">
       <div class="header">
-          <img src="assets/logomitupa.png" alt="Logo" class="logo"> <!-- Thay đổi đường dẫn đến logo -->
+          <img src="assets/999.jpg" alt="Logo" class="logo"> <!-- Thay đổi đường dẫn đến logo -->
           <div class="text-container">
-              <p>Welcome</p>
-              <p>MitupaTattoo</p>
-              <p>Make an appointment and connect with us!</p>
+              <p class="p1">Welcome</p>
+              <p class="p2">MitupaTattoo</p>
+              <p class="p3">Make an appointment and connect with us!</p>
           </div>
       </div>
 
