@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+
+p{
+  margin: 0px;
+}
+
+.body{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/IMG_9800.JPG");
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.border{
+  border: 1px solid #AAC8A7;
+  border-radius: 50px;
+  background-color: rgba(227, 242, 193, 0.7);
+  padding: 5px;
+  color: black;
+}
+
+
+.header {
+  display:flex;
+  align-items: center;
+}
+
+.logo{
+  width: 110px; /* Kích thước logo, có thể điều chỉnh */
+  height: auto;
+  margin-right: 10px; /* Khoảng cách giữa logo và văn bản  */
+  border-radius: 15px 15px 30px 30px ;
+}
+
+.text { 
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Căn chỉnh tất cả các phần tử ở phía đầu */
+}
+
+.welcome,
+.brand,
+.tagline {
+  text-align: center;
+  margin: 0;
+}
+
+.welcome {
+  font-family: 'Amatic SC', roboto;
+  font-size: 25px; /* Có thể điều chỉnh */
+  padding: 1px;
+  color: #ffffff;
+}
+
+.brand {
+  font-family: 'MitupaTattoo', roboto;
+  font-size: 30px; 
+  padding: 1px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tagline {
+  font-family: 'Amatic SC', roboto;
+  font-size: 15px; 
+  padding: 1px;
+  color: #ffffff;
+}
+
+.Map {
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.main {
+  display: flex;          /* Sử dụng Flexbox để đặt thẻ con theo hàng dọc */
+  flex-direction: column; /* Đặt hướng thành cột */
+  gap: 2px;             /* Khoảng cách giữa các link-itemm */
+  margin-left:  35px;
+  width: 100%; /* Thay đổi phần tử sang chiều rộng tương đối */
+  max-width: 600px; /* Hoặc một giá trị mong muốn */
+  margin: 0 auto; /* Căn giữa */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.link-itemm {
+  display: flex;         /* Sử dụng Flexbox cho link-itemm */
+  flex-direction: row;   /* Đặt hướng thành hàng ngang */
+  align-items: center;   /* Căn giữa theo chiều dọc nếu có nội dung không cao bằng */
+  padding: 7px;         /* Khoảng cách bên trong của link-itemm */
+  border-radius: 5px;    /* Bo góc cho link-itemm */
+}
+
+
+.link-itemm1 {
+  background-color: #cdcccc;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.48);
+  border-radius: 15px 0 0 15px;
+}
+
+.link-itemm1 img {
+  max-width: 80%; /* Đảm bảo ảnh không vượt quá chiều rộng của phần tử cha */
+  height: 80%; /* Đảm bảo tỷ lệ ảnh không bị thay đổi */
+  margin: 5px 1px 5px 10px;
+}
+
+.link-itemm2 {
+  background: rgba(255, 255, 255, 0.372);
+  width: 250px;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.link-itemm2:hover {
+  background-color: rgba(195, 194, 194, 0.998);
+}
+
+.link-itemm2 a {
+  margin-left: 10px;
+  color:rgb(255, 255, 255);
+  display: flex;
+  text-decoration-line: none;
+  font-size: larger;
+  font-family: 'Amatic SC', roboto;
+  font-weight: bold;
+}
+
+
+  
+/* ----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  }
+  </style>
+</head>
+<body>
+    <div className="App">
+        <div className="header">
+          <img src="assets/logomitupa.png" alt="Logo" className="logo" />
+      
+        <div className="text">
+            <div className="welcome">Welcome</div>
+            <div className="brand">MITUPATATTOO</div>
+            <div className="tagline"> xxxx</div>
+        </div>
+        </div>
+    
+      
+        <div className="main">
+            <div className="link-itemm">
+               <div className="link-itemm1">
+               <img src="https://cdn-icons-png.flaticon.com/128/3059/3059484.png" alt="logo" />
+                </div>
+                <div className="link-itemm2">
+                <a href="https://chillwithme.online">Website Mitupa Tattoo</a>
+                </div>
+            </div>
+      
+            <div className="link-itemm">
+                <div className="link-itemm1">
+                <img src="https://cdn-icons-png.flaticon.com/128/25/25187.png" alt="logo" />
+              </div>
+              <div className="link-itemm2">
+                <a href="https://www.facebook.com/minhthu.phan.77398?mibextid=LQQJ4d"> Facebook cô chủ Minh Thư Phan</a>
+              </div>
+            </div>
+      
+              <div className="link-itemm">
+                <div className="link-itemm1">
+                <img src="https://cdn-icons-png.flaticon.com/128/25/25187.png" alt="logo" />
+                </div>
+                <div className="link-itemm2">
+                <a href="https://www.facebook.com/mitupa.tattoo.painting?mibextid=LQQJ4d"> Facebook Mitupa Tattoo</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+              <div className="link-itemm1">
+              <img src="https://cdn-icons-png.flaticon.com/128/25/25187.png" alt="logo" />
+              </div>
+              <div className="link-itemm2">
+                <a href="https://www.facebook.com/profile.php?id=61553744483256&mibextid=LQQJ4d">Facebook lớp đào tạo nghề xăm Mitupa Tattoo</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+              <div className="link-itemm1">
+              <img src="https://cdn-icons-png.flaticon.com/128/25/25187.png" alt="logo" />
+              </div>
+              <div className="link-itemm2">
+                <a href="">Facebook tiệm tranh</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+                 <div className="link-itemm1">
+                 <img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt="logo" />
+                 </div>
+                 <div className="link-itemm2">
+                <a href="https://www.tiktok.com/@minhthuphan1208?_t=8pxlTkDAbSs&_r=1"> Tiktok cô chủ Minh Thư Phan</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+                 <div className="link-itemm1">
+                 <img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt="logo" />
+                 </div>
+                 <div className="link-itemm2">
+                <a href="https://www.tiktok.com/@mitupatattoo?_t=8pxlR4SH1bW&_r=1">Tiktok Mitupa Tattoo</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+                 <div className="link-itemm1">
+                 <img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt="logo" />
+                 </div>
+                 <div className="link-itemm2">
+                <a href="">Tiktok tiệm tranh</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+                  <div className="link-itemm1">
+                  <img src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="logo" />
+                  </div>
+                  <div className="link-itemm2">
+                  <a href="">Instagram của cô chủ Mitupa Tattoo</a>
+                  </div>
+              </div>
+      
+              <div className="link-itemm">
+                  <div className="link-itemm1">
+                  <img src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="logo" />
+                  </div>
+                  <div className="link-itemm2">
+                  <a href="https://www.instagram.com/mitupatattoo?igsh=ZThnanV2djl6aXgz">Instagram của Mitupa Tattoo</a>
+                  </div>
+              </div>
+      
+            <div className="link-itemm">
+              <div className="link-itemm1">
+              <img src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="logo" />
+                </div>
+                <div className="link-itemm2">
+                <a href="https://www.instagram.com/mitupa_dao_tao_nghe_xam?igsh=eGp2dTYwODliYnVo">Instagram lớp đào tạo nghề xăm Mitupa Tattoo</a>
+                </div>
+              </div>
+      
+              <div className="link-itemm">
+              <div className="link-itemm1">
+              <img src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="logo" />
+                </div>
+                <div className="link-itemm2">
+                <a href="">Instagram tiệm tranh</a>
+                </div>
+              </div>
+      
+      
+      
+      
+        </div>
+      
+      </div>
+</body>
+</html>
