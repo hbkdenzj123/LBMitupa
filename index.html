@@ -13,12 +13,30 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding: 0;
+    overflow: hidden;
 }
 
 html, body {
     height: 100%; 
 }
-
+.snowflake {
+            position: absolute;
+            top: -10px;
+            color: white; /* Màu của bông tuyết */
+            font-size: 24px;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+/*
+.snowflake:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.8);
+}
+*/
+ /* .snowflakes { 
+    z-index: 9999;
+}
+*/
 .large-div {
     width: 100%; 
     min-height: 100vh; 
@@ -41,6 +59,17 @@ html, body {
     margin-right: 20px; 
     margin-top: 10px;
 }
+.hat-container {
+    position: absolute;
+    top: -20px; /* Điều chỉnh giá trị này để mũ nằm đúng trên logo */
+    left: 27%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+        
+ .hat {
+            width: 90px; /* Kích thước mũ Noel tùy chỉnh, có thể thay đổi */
+        }
 
 .text-container {
     display: flex;
@@ -70,7 +99,7 @@ html, body {
     align-items: center;
     width: 80%; 
     max-width: 400px; 
-    background-color: rgba(255, 255, 255, 0.42); 
+    background-color: rgba(255, 255, 255, 0.5); 
     margin: 10px 0;
     padding: 20px; 
     text-align: left;
@@ -99,20 +128,31 @@ html, body {
     font-size: 10px;
     font-weight: bold;
 }
-
+@keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh); /* Rơi xuống hết chiều cao cửa sổ */
+            }
+        }
   </style>
 
 <body>
   <div class="large-div">
-      <div class="header">
-          <img src="assets/441043889_835145031983700_1946370424284281136_n.jpg" alt="Logo" class="logo">
-          <div class="text-container">
-              <p class="p1">Welcome</p>
-              <p class="p2">MitupaTattoo</p>
-              <p class="p3">Make an appointment and connect with us!</p>
-          </div>
-      </div>
-      <div class="hey">
+    <div class="header">
+        <div class="hat-container">
+            <img src="—Pngtree—santa_hat_8812346.png" alt="Mũ Noel" class="hat">
+        </div>
+        <img src="assets/441043889_835145031983700_1946370424284281136_n.jpg" alt="Logo" class="logo">
+        <div class="text-container">
+            <p class="p1">Welcome</p>
+            <p class="p2">MitupaTattoo</p>
+            <p class="p3">Make an appointment and connect with us!</p>
+        </div>
+    </div>
+
+        <div class="hey">
             <a href="https://chillwithme.online" class="small-div">
              <img src="assets/world-wide-web.png" alt="Mini Logo 1" class="mini-logo">
              <span>Website MitupaTattoo</span></a>
@@ -160,10 +200,31 @@ html, body {
             <a href="https://www.tiktok.com/@tiemtranhmitupa?_t=8rW9K6UWypT&_r=1" class="small-div">
              <img src="assets/tik-tok.png" alt="Mini Logo 4" class="mini-logo">
              <span>Tiktok Tiệm tranh Mitupa</span></a>
-    </div>
+        </div>
+
     <footer class="footer">
       <p></p>
   </footer>
   </div>
+  <script>
+    const numberOfSnowflakes = 100; // Số lượng bông tuyết
+    const snowflakeContainer = document.querySelector('.large-div'); // Chọn div chứa nội dung
+
+    for (let i = 0; i < numberOfSnowflakes; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.innerHTML = '❄'; // Biểu tượng bông tuyết
+        snowflake.style.left = Math.random() * 100 + 'vw'; // Đặt vị trí ngẫu nhiên trong chiều ngang của cửa sổ
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Thời gian rơi ngẫu nhiên
+        snowflake.style.opacity = Math.random(); // Độ mờ ngẫu nhiên
+
+        snowflakeContainer.appendChild(snowflake); // Thêm bông tuyết vào container
+
+        // Xóa bông tuyết khỏi DOM sau khi nó hoàn thành quá trình rơi để cải thiện hiệu suất
+        snowflake.addEventListener("animationend", function() {
+            snowflake.remove();
+        });
+    }
+</script>
 </body>
 </html>
